@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes - Honkai Star Rail</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Personajes de Honkai Star Rail</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="personajes.html">Personajes</a></li>
+                <li><a href="tierlist.html">Tier List</a></li>
+                <li><a href="guias.html">Guías</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="filtro-personajes">
+            <h2>Personajes</h2>
+            <p id="contador-resultados">Mostrando 0 personajes</p>
+            <hr class="divisoria">
+
+            <div class="filtro-contenedor">
+                <!-- Campo de búsqueda -->
+                <div class="filtro-busqueda-container">
+                    <input type="text" id="filtro-busqueda" placeholder="Buscar personajes...">
+                    <button id="borrar-busqueda" class="borrar-boton">✖</button>
+                </div>
+            
+                <!-- Filtro por rareza -->
+                <div class="filtro-grupo">
+                    <button class="filtro-rareza active" data-rareza="*">★</button>
+                    <button class="filtro-rareza" data-rareza="4">4★</button>
+                    <button class="filtro-rareza" data-rareza="5">5★</button>
+                </div>
+            
+                <!-- Filtro por elemento -->
+                <div class="filtro-grupo">
+                    <button class="filtro-elemento active" data-elemento="*"><img src="elementos/all.png" alt="Todos"></button>
+                    <button class="filtro-elemento" data-elemento="Fisico"><img src="elementos/fisico.png" alt="Fisico"></button>
+                    <button class="filtro-elemento" data-elemento="Fuego"><img src="elementos/fuego.png" alt="Fuego"></button>
+                    <button class="filtro-elemento" data-elemento="Hielo"><img src="elementos/hielo.png" alt="Hielo"></button>
+                    <button class="filtro-elemento" data-elemento="Rayo"><img src="elementos/rayo.png" alt="Rayo"></button>
+                    <button class="filtro-elemento" data-elemento="Viento"><img src="elementos/viento.png" alt="Viento"></button>
+                    <button class="filtro-elemento" data-elemento="Cuantico"><img src="elementos/cuantico.png" alt="Cuantico"></button>
+                    <button class="filtro-elemento" data-elemento="Imaginario"><img src="elementos/imaginario.png" alt="Imaginario"></button>
+                </div>
+            
+                <!-- Filtro por vía -->
+                <div class="filtro-grupo">
+                    <button class="filtro-via active" data-via="*"><img src="vias/all.png" alt="Todos"></button>
+                    <button class="filtro-via" data-via="Abundancia"><img src="vias/abundancia.png" alt="Abundancia"></button>
+                    <button class="filtro-via" data-via="Destruccion"><img src="vias/destruccion.png" alt="Destruccion"></button>
+                    <button class="filtro-via" data-via="Erudicion"><img src="vias/erudicion.png" alt="Erudicion"></button>
+                    <button class="filtro-via" data-via="Armonia"><img src="vias/armonia.png" alt="Armonia"></button>
+                    <button class="filtro-via" data-via="Caceria"><img src="vias/caceria.png" alt="Caceria"></button>
+                    <button class="filtro-via" data-via="Nihilidad"><img src="vias/nihilidad.png" alt="Nihilidad"></button>
+                    <button class="filtro-via" data-via="Conservacion"><img src="vias/conservacion.png" alt="Conservacion"></button>
+                </div>
+            
+                <!-- Botón de reset -->
+                <button id="reset-filtros" class="reset-boton">Resetear filtros</button>
+            </div>
+            
+            <div class="personajes-container">
+                <a href="infopersonajes.html?peronaje=seele" class="personaje" title="Cámbiame por el enlace" data-personaje="seele" data-elemento="Cuantico" data-rareza="5" data-via="Caceria">
+                    <img src="elementos/cuantico.png" alt="Cuantico" class="elemento-img">
+                    <img src="images/seele.png" alt="Imagen de Seele" class="personaje-img">
+                    <h3>Seele</h3>
+                </a>
+                <a href="infopersonajes.html?peronaje=bronya" class="personaje" title="Cámbiame por el enlace" data-personaje="bronya" data-elemento="Viento" data-rareza="5" data-via="Armonia">
+                    <img src="elementos/viento.png" alt="Viento" class="elemento-img">
+                    <img src="images/bronya.png" alt="Imagen de Bronya" class="personaje-img">
+                    <h3>Bronya</h3>
+                </a>
+                <a href="infopersonajes.html?peronaje=danheng" class="personaje" title="Cámbiame por el enlace" data-personaje="danheng" data-elemento="Imaginario" data-rareza="5" data-via="Destruccion">
+                    <img src="elementos/imaginario.png" alt="Imaginario" class="elemento-img">
+                    <img src="images/danheng.png" alt="Imagen de Dan Heng Inhibitor Lunae" class="personaje-img">
+                    <h3>Dan Heng Inhibitor Lunae</h3>
+                </a>
+                <a href="infopersonajes.html?peronaje=blade" class="personaje" title="Cámbiame por el enlace" data-personaje="blade" data-elemento="Viento" data-rareza="5" data-via="Destruccion">
+                    <img src="elementos/viento.png" alt="Viento" class="elemento-img">
+                    <img src="images/blade.png" alt="Imagen de Blade" class="personaje-img">
+                    <h3>Blade</h3>
+                </a>
+                <a href="infopersonajes.html?peronaje=kafka" class="personaje" title="Cámbiame por el enlace" data-personaje="kafka" data-elemento="Rayo" data-rareza="5" data-via="Nihilidad">
+                    <img src="elementos/rayo.png" alt="Rayo" class="elemento-img">
+                    <img src="images/kafka.png" alt="Imagen de Kafka" class="personaje-img">
+                    <h3>Kafka</h3>
+                </a>
+                <a href="infopersonajes.html?peronaje=welt" class="personaje" title="Cámbiame por el enlace" data-personaje="welt" data-elemento="Imaginario" data-rareza="5" data-via="Nihilidad">
+                    <img src="elementos/imaginario.png" alt="Imaginario" class="elemento-img">
+                    <img src="images/welt.png" alt="Imagen de Welt" class="personaje-img">
+                    <h3>Welt</h3>
+                </a>
+                <a href="infopersonajes.html?peronaje=bailu" class="personaje" title="Cámbiame por el enlace" data-personaje="bailu" data-elemento="Rayo" data-rareza="5" data-via="Abundancia">
+                    <img src="elementos/rayo.png" alt="Rayo" class="elemento-img">
+                    <img src="images/bailu.png" alt="Imagen de Bailu" class="personaje-img">
+                    <h3>Bailu</h3>
+                </a>
+                <a href="infopersonajes.html?peronaje=herta" class="personaje" title="Cámbiame por el enlace" data-personaje="herta" data-elemento="Hielo" data-rareza="4" data-via="Erudicion">
+                    <img src="elementos/hielo.png" alt="Hielo" class="elemento-img">
+                    <img src="images/herta.png" alt="Imagen de Herta" class="personaje-img">
+                    <h3>Herta</h3>
+                </a>
+                <a href="infopersonajes.html?peronaje=tingyun" class="personaje" title="Cámbiame por el enlace" data-personaje="tingyun" data-elemento="Rayo" data-rareza="4" data-via="Armonia">
+                    <img src="elementos/rayo.png" alt="Rayo" class="elemento-img">
+                    <img src="images/tingyun.png" alt="Imagen de Tingyun" class="personaje-img">
+                    <h3>Tingyun</h3>
+                </a>
+                <a href="infopersonajes.html?peronaje=loucha" class="personaje" title="Cámbiame por el enlace" data-personaje="loucha" data-elemento="Imaginario" data-rareza="5" data-via="Abundancia">
+                    <img src="elementos/imaginario.png" alt="Imaginario" class="elemento-img">
+                    <img src="images/loucha.png" alt="Imagen de Loucha" class="personaje-img">
+                    <h3>Loucha</h3>
+                </a>
+                <a href="infopersonajes.html?peronaje=jingyuan" class="personaje" title="Cámbiame por el enlace" data-personaje="jingyuan" data-elemento="Rayo" data-rareza="5" data-via="Erudicion">
+                    <img src="elementos/rayo.png" alt="Rayo" class="elemento-img">
+                    <img src="images/jingyuan.png" alt="Imagen de Jing Yuan" class="personaje-img">
+                    <h3>Jing Yuan</h3>
+                </a>
+                <a href="infopersonajes.html?peronaje=himeko" class="personaje" title="Cámbiame por el enlace" data-personaje="himeko" data-elemento="Fuego" data-rareza="5" data-via="Erudicion">
+                    <img src="elementos/fuego.png" alt="Fuego" class="elemento-img">
+                    <img src="images/himeko.png" alt="Imagen de Himeko" class="personaje-img">
+                    <h3>Himeko</h3>
+                </a>
+                <a href="infopersonajes.html?peronaje=7marzo" class="personaje" title="Cámbiame por el enlace" data-personaje="7marzo" data-elemento="Hielo" data-rareza="4" data-via="Conservacion">
+                    <img src="elementos/hielo.png" alt="Hielo" class="elemento-img">
+                    <img src="images/7marzo.png" alt="Imagen de March 7th" class="personaje-img">
+                    <h3>March 7th</h3>
+                </a>
+                <a href="infopersonajes.html?peronaje=yanqing" class="personaje" title="Cámbiame por el enlace" data-personaje="yanqing" data-elemento="Hielo" data-rareza="5" data-via="Caceria">
+                    <img src="elementos/hielo.png" alt="Hielo" class="elemento-img">
+                    <img src="images/yanqing.png" alt="Imagen de Yanqing" class="personaje-img">
+                    <h3>Yanqing</h3>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
